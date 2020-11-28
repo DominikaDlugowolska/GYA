@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biblioteket</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+        	<div class="container-top">
+        	    <nav>
+                    <div><a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo.svg"
+        	                alt="nti"></a> </div>
+        	        <ul class="meny">
+        	            <a class="here" href=""><li>Startsida</li></a>
+        	            <a href="min-sida.html"><li>Min sida</li></a>
+        	            <a href="elev.html"><li>Elev</li></a>
+        	            <a href="larare.html"><li>Lärare</li></a>
+        	        </ul>
+                </nav>
+            </div>
+        </header>
+            <main>
+                <div class="head">
+                    <h1 class="ml1">
+                        <span class="text-wrapper">
+                            <span class="line line1"></span>
+                            <span class="letters">Skolbiblioteket</span>
+                            <span class="line line2"></span>
+                        </span>
+                    </h1>
+                </div>
+        </div>
+            <div class="container-bottom">
+                <div class="vertical">
+                    <h2 class="info">Välkommna till NTI-Biblioteket</h2>
+                    <div>
+                        <h3>Öppen tider</h3>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4>Nya böcker</h4>
+                </div>
+            </div>
+            </main>
+    
+    <script>
+        var textWrapper = document.querySelector('.ml1 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml1 .letter',
+                scale: [0.3, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 600,
+                delay: (el, i) => 70 * (i + 1)
+            }).add({
+                targets: '.ml1 .line',
+                scaleX: [0, 1],
+                opacity: [0.5, 1],
+                easing: "easeOutExpo",
+                duration: 700,
+                offset: '-=875',
+                delay: (el, i, l) => 300 * (l - i)
+            }).add({
+                targets: '.ml1',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 5000
+            });
+    </script>
+
+</body>
+</html>
