@@ -1,0 +1,134 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #F6F6F6;
+}
+header {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top */
+.container{
+    width: 100%;
+    padding: 20px;
+}
+
+header a {
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(218, 218, 218);
+}
+header a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+header ul li {
+    display: inline;
+    font-size: 28px;
+    text-align: right;
+    padding: 0 10px;
+}
+
+ header .meny {
+    padding: 0 10px 10px 10px;
+    margin-top: auto;
+}
+
+.top {
+    width: 100%;
+    background-image: linear-gradient(-45deg, #d82ca4 0, rgb(76, 0, 130) 100%);
+}
+button {
+    color: #000000;
+    background-color: #FFF;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+button:hover {
+    color: #000000;
+    background-color: #ebebeb;
+}
+h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+h2{
+    color: black;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+h3 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 25px;
+    color: rgb(116, 112, 112);
+}
+p{
+    font-size: 14px;
+}
+.author{
+    color: red;
+}
+
+/* Main */
+main{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.box2{
+    display: flex;
+    flex-direction: column;
+    background-color: #F1E9DB;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 16px;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.book-card{
+    max-width: 250px;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.book-card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 700px) {
+    .wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    h3{
+        font-size: 60px;
+    }
+  }
+@media screen and (min-width: 1000px) {
+    .wrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Min-sida</title>
-    <link rel="stylesheet" href="./style/style2.css">
+    <link rel="stylesheet" href="./style/style3.css">
 </head>
 <body>
     <header>
@@ -30,75 +30,41 @@
         </nav>
     </header>
 
-    <div class="table">
-        
-        <div class="row">
-            <div class="title">Bible</div>
-            <div class="author">Wiliam Bob</div>
-            <div class="date">20.20.20</div>
-        </div>
-    </div>
-   
-
-
-
     <main>
-        <div style="width: 50%;" class="box">
-            <h2>Min Sida</h2>
-            <div class="box-two">
+        <div class="container">
+            <div class="box2">
+                <h2>Genres</h2>
                 <div>
-                    <h4>Utlånade böcker</h4>
-                </div>
-                <div style="margin-left: auto; width: 45%;">
-                    <h4>Datum</h4>
-                </div>
-            </div>
-            <div class="grey-box">
-                <div class="titles">
-                    <p>A dog’s adventure</p>
-                    <p>A dog’s adventure</p>
-                </div>
-                <div id="author">
-                    <p> W. Bruce Cameron </p>
-                    <p> W. Bruce Cameron</p>
-                </div>
-                <div class="right-date-box">
-                    <p style="margin-left: auto;">11 Maj 2020</p>
+                    <button>Thrillers</button>
+                    <button>Romance</button>
+                    <button>Science-fiction</button>
+                    <button>Drama</button>
                 </div>
             </div>
-
-            <div class="box-two">
-                <div>
-                    <h4>Kommande återlämningar</h4>
+            <div class="box2">
+                <h2>Collection</h2>
+                <div class="wrapper">
+                    <div class="book-card">
+                        <img src="bilder/tolkien.jpg" alt="">
+                        <h3>Lord of the rings</h3>
+                        <p class="author">J.R.R Tolkien</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="bilder/tolkien.jpg" alt="">
+                        <h3>Lord of the rings</h3>
+                        <p class="author">J.R.R Tolkien</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="bilder/tolkien.jpg" alt="">
+                        <h3>Lord of the rings</h3>
+                        <p class="author">J.R.R Tolkien</p>
+                    </div>
+                    <div class="book-card">
+                        <img src="bilder/tolkien.jpg" alt="">
+                        <h3>Lord of the rings</h3>
+                        <p class="author">J.R.R Tolkien</p>
+                    </div>
                 </div>
-            </div>
-            <div class="grey-box">
-                <div class="title">
-                    <p>A dog’s adventure</p>
-                    <p>A dog’s adventure</p>
-                </div>
-                <div id="author">
-                    <p> W. Bruce Cameron</p>
-                    <p> W. Bruce Cameron</p>
-                </div>
-                <div id="end-date" class="right-date-box">
-                    <p style="margin-left: auto;">11 Maj 2020</p>
-                </div>
-            </div>
-            <p style="font-size: 15px; color: red; margin-left: auto;">OBS alla böcker ska åtelämnas 4 veckor efter
-                utlånet.</p>
-        </div>
-
-        <div style="width: 50%;" class="box">
-            <div class="box-two">
-                <div>
-                    <h4>Önske brunn</h4>
-                </div>
-            </div>
-            <div class="grey-box">
-                <form  class="wishing-well" action="#" method="POST">
-                    <input  class="wishing-well" type="text">
-                </form>
             </div>
         </div>
     </main>
