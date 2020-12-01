@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;500&display=swap');
-
+body {
+    margin: 0;
+}
 header {
     height: auto;
     display: flex;
     flex-direction: row;
     margin-bottom: 60px;
+    padding: 20px;
 }
 
 /* header a {
@@ -32,6 +35,7 @@ header a:hover {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    background-color: rgb(146, 88, 88);
 }
 
 .topnav a {
@@ -90,10 +94,16 @@ header a:hover {
         grid-template-columns: auto auto auto;
         padding: 40px;
     }
+    .page-grid .genres {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 
     .page-grid .collection {
         grid-column-start: 3;
-        grid-column-end: 3;
+        grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 12;
     }
@@ -111,8 +121,10 @@ header a:hover {
         padding: 16px;
         box-shadow: 2px 20px 40px 0px rgba(0, 0, 0, 0.1);
         border-radius: 16px;
-        grid-row-start: 3;
-        grid-row-end: 6;
+        grid-row-start: 5;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 
 }
