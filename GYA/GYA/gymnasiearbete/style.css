@@ -12,7 +12,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 body {
     width: auto;
     height: auto;
-    background-color: #F6F6F6;
+    background-color: #f1e9db;
 }
 header {
     height: auto;
@@ -65,7 +65,7 @@ header a:hover {
 header ul li {
     display: inline;
     font-size: 28px;
-    color: rgb(230, 227, 231);
+    color: rgb(44, 43, 43);
     text-align: right;
     padding: 0 10px;
 }
@@ -85,7 +85,7 @@ header ul li:hover {
     transform: translate(-50%, -50%);
     width: 400px;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.8);
+    background: #F1E9DB;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(78, 76, 76, 0.5);
     border-radius: 10px;
@@ -144,13 +144,6 @@ header ul li:hover {
     color: white;
 }
 
-
-
-/* header .meny {
-    padding: 0 10px 10px 900px;
-    margin-top: auto;
-} */
-
 h4 {
     font-size: 25px;
     color: rgb(116, 112, 112);
@@ -158,7 +151,7 @@ h4 {
 
 .top {
     width: 100%;
-    background: linear-gradient(0deg, rgba(105,1,133,1) 26%, rgba(182,19,153,1) 100%);
+    /* background: linear-gradient(0deg, rgba(105,1,133,1) 26%, rgba(182,19,153,1) 100%); */
 }
 /* /*background-image: linear-gradient(-45deg,#dd0890 0,indigo 100%);
  */
@@ -184,46 +177,6 @@ h1 {
     padding: 50px;
     text-align: center;
 } 
-/*
-    input[type="text"], input[type="password"] {
-    border-radius: 10px;
-    border: 2px solid #aaa;
-    outline: none;
-    height: 27px;
-    width: 50%;
-    background-color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: 40px;
-    margin: 15px auto 7px auto;
-    box-sizing: border-box;
-    transition: 0.5s;
-    padding: 10px;
-}
-
-input[type="text"]:focus, input[type="password"]:focus {
-    border-color: rgb(173, 107, 199);
-    box-shadow: 0 0 9px 0 rgb(173, 107, 199);
-}
-
-button {
-    color: rgb(255, 255, 255);
-    background-color: rgb(212, 162, 223);
-    border: 2px solid #aaa;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-top: 10px;
-}
-button:hover {
-    border-color: rgb(173, 107, 199);
-    color: purple;
-    background-color: rgb(189, 93, 184);
-}
-
-h3 {
-    font-size: 40px;
-    color: red;
-    margin: 50px 0 0 300px;
-} */
 
 /* js */
 .ml1 {
@@ -304,4 +257,24 @@ p{
 .wishing-well{
     /* change class for form */
     width: 100%;
+}
+
+/* meny */
+.button{
+    background: #F1E9DB;
+    border: 1.5px solid purple;
+    padding: 10px;
+    margin-top: 8px;
+    width: 100%;
+    font-size: 20px;
+    color: rgb(43, 41, 41);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;  
+    width: 30%;
+    
+}
+.button:hover{
+    background-image: linear-gradient(-45deg, #d82ca4 0, rgb(76, 0, 130) 100%);
+    color: white;
 }
