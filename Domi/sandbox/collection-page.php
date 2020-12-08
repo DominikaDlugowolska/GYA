@@ -1,5 +1,6 @@
 <?php
 include "./conn.php";
+/* include "./bookUpload.php"; */
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -48,9 +49,9 @@ include "./conn.php";
                 
                     <?php
 
-                    $image = fopen('image/' . $pic, 'r');
+                    /* $image = fopen('book-images/' . $pic, 'r');
                     $Data = fread($image,filesize('$image'));
-                    fclose($image);
+                    fclose($image); */
                     echo "<div>";
                     
                     $sql = "SELECT * FROM collection";
@@ -69,7 +70,7 @@ include "./conn.php";
                     while ($row = $result->fetch_assoc()) {
                         echo "<div class=\"book-card-holder\">";
                     echo "<div class=\"book-card\">";
-                    echo "<div>$row[image]</div>";
+                    echo "<div><img src=\"bilder/tolkien.jpg\"></div>";
                     echo "<div class=\"book-title\">
                             <h3>$row[title]</h3>
                             <p>$row[author]</p>";

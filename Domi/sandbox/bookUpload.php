@@ -32,36 +32,32 @@ include "./conn.php";
             <label>Title <input type="text" name="title"></label>
             <label>Author <input type="text" name="author"></input></label>
             <label for="image">Image</label>
-            <input type="hidden" name="size" value="350000">
             <input type="file" name="image">
             <button>Save</button>
         </form>
         <?php
-        // This is the directory where images will be saved
+        /* // This is the directory where images will be saved
         $target = "./book-images";
-        $target = $target . basename($_FILES['image']['name']);
+        $target = $target . basename($_FILES['image']); */
 
         // Ta emot det som skickas
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
         $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
-        $pic = ($_FILES['image']['name']);
+        /* $pic = ($_FILES['image']); */
 
 
         // Om data finns...
-        if ($title && $author && $pic) {
+        if ($title && $author) {
             // mysql -> insert -> runrik och text -> copy php code
             // Sql satsen
-            $sql = "INSERT INTO collection (title, author) VALUES ('$title', '$author', '$pic')";
+            $sql = "INSERT INTO collection (title, author) VALUES ('$title', '$author')";
 
-            // Writes the photo to the server
-            if (move_uploaded_file($_FILES['photo']['tmp_name'], $target)) {
+            /* // Var filen skall hamna
+            $target = "./book-images/$pic";
 
-                // Tells you if its all ok
-                echo "The file " . basename($_FILES['uploadedfile']['name']) . " has been uploaded, and your information has been added to the directory";
-            } else {
-                // Gives and error if its not
-                echo "Sorry, there was a problem uploading your file.";
-            }
+            // Äntligen! Flytta filen in i mappen
+            move_uploaded_file($pic, $target); */
+
 
             // Steg 2: nu kör vi sql-saten
             $result = $conn->query($sql);
