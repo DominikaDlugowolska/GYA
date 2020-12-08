@@ -18,9 +18,9 @@ include "./conn.php";
                         alt="nti"></a>
             </div>
             <div class="topnav" id="myTopnav">
-                <a href="#" class="active">Homepage</a>
-                <a href="#">Homepage</a>
-                <a href="#">Homepage</a>
+                <a href="#" class="active">Upload</a>
+                <a href="#">Upload</a>
+                <a href="#">Sing out</a>
                 <a href="#">Homepage</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
