@@ -26,15 +26,32 @@ include "./conn.php";
 </head>
 
 <body>
-    <div class="kontainer">
-        <h1>Write new books</h1>
-        <form action="#" method="POST">
-            <label>Title <input type="text" name="title"></label>
-            <label>Author <input type="text" name="author"></input></label>
-            <label for="image">Image</label>
-            <input type="file" name="image">
-            <button>Save</button>
-        </form>
+<header>
+            <div>
+                <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg"
+                        alt="nti"></a>
+            </div>
+            <div class="topnav" id="myTopnav">
+                <a href="collection-page.php">Collection</a>
+                <a href="#" class="active">Upload</a>
+                <a href="#">Sing out</a>
+                <a href="#">Homepage</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+    </header>
+    <div class="page-grid">
+        <div class="collection">
+            <h1>Write new books</h1>
+            <form action="#" method="POST">
+                <label>Title <input type="text" name="title"></label>
+                <label>Author <input type="text" name="author"></input></label>
+                <label for="image">Image</label>
+                <input type="file" name="image">
+                <button>Save</button>
+            </form>
+        </div>
         <?php
         /* // This is the directory where images will be saved
         $target = "./book-images";
