@@ -3,7 +3,7 @@
 $host = "localhost";
 $db = "skolbibliotek";
 $user = "skolbibliotek";
-$pass = "bZ7EL0i4JS6tzaqi";
+$pass = "TYRBERqsVwTH1b0I";
 
 // Create connection
 $conn = new mysqli($host, $user, $pass, $db);
