@@ -1,3 +1,6 @@
+<?php
+include "./conn.php";
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -43,56 +46,32 @@
                     <h2>Collection</h2>
                 </div>
                 <div class="book-card-wrapper">
-                    <div class="book-card-holder">
-                        <div class="book-card">
-                            <div><img src="bilder/tolkien.jpg" alt=""></div>
-                            <div class="book-title">
-                                <h3>Title</h3>
-                                <p>Author</p>
-                            </div>
-                            <button></button>
-                        </div>
-                    </div>
-                    <div class="book-card-holder">
-                        <div class="book-card">
-                            <div><img src="bilder/tolkien.jpg" alt=""></div>
-                            <div class="book-title">
-                                <h3>Title</h3>
-                                <p>Author</p>
-                            </div>
-                            <button></button>
-                        </div>
-                    </div>
-                    <div class="book-card-holder">
-                        <div class="book-card">
-                            <div><img src="bilder/tolkien.jpg" alt=""></div>
-                            <div class="book-title">
-                                <h3>Title</h3>
-                                <p>Author</p>
-                            </div>
-                            <button></button>
-                        </div>
-                    </div>
-                    <div class="book-card-holder">
-                        <div class="book-card">
-                            <div><img src="bilder/tolkien.jpg" alt=""></div>
-                            <div class="book-title">
-                                <h3>Title</h3>
-                                <p>Author</p>
-                            </div>
-                            <button></button>
-                        </div>
-                    </div>
-                    <div class="book-card-holder">
-                        <div class="book-card">
-                            <div><img src="bilder/tolkien.jpg" alt=""></div>
-                            <div class="book-title">
-                                <h3>Title</h3>
-                                <p>Author</p>
-                            </div>
-                            <button></button>
-                        </div>
-                    </div>
+                    <?php
+
+                    $sql = "SELECT * FROM collection";
+                    $result = $conn->query($sql);
+
+                    // Check if everything went alright
+                    if (!$result) {
+                        die("Something went wrong with SQL: " . $conn->error);
+                    } else {
+                        echo "<p>Found " . $result->num_rows . " uploaded books.</p>";
+                    }
+                    
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<div class=\"book-card-holder\">";
+                    echo "<div class=\"book-card\">";
+                    echo "<div><img src=\"bilder/tolkien.jpg\"></div>";
+                    echo "<div class=\"book-title\">
+                            <h3>$row[title]</h3>
+                            <p>$row[author]</p>";
+                    echo "</div>";
+                    echo "<button></button>";
+                    echo "</div>";
+                    echo "</div>";
+                    }
+                    ?>
+                    
                 </div>
             </div>
             <div class="request-book">
