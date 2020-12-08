@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Min-sida</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/collection-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+            <div>
+                <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti-logo.svg"
+                        alt="nti"></a>
+            </div>
+            <div class="topnav" id="myTopnav">
+                <a href="#" class="active">Upload</a>
+                <a href="#">Log out</a>
+                <a href="#">Homepage</a>
+                <a href="#">Homepage</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        
+    </header>
+    <main>
+        <div class="page-grid">
+            <div class="genres">
+                <div class="title">
+                    <h2>Genres</h2>
+                </div>
+                <div class="genres-wrapper">
+                    <button type="button" class="btn btn-outline-primary">Thriller</button>
+                    <button class="genre">Horror</button>
+                    <button class="genre">Romance</button>
+                    <button class="genre">Romance</button>
+                    <button class="genre">Romance</button>
+                </div>
+            </div>
+            <div class="collection">
+                <div class="title">
+                    <h2>Collection</h2>
+                </div>
+                <div class="book-card-wrapper">
+                    <div class="book-card-holder">
+                        <div class="book-card">
+                            <div><img src="bilder/tolkien.jpg" alt=""></div>
+                            <div class="book-title">
+                                <h3>Title</h3>
+                                <p>Author</p>
+                            </div>
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="book-card-holder">
+                        <div class="book-card">
+                            <div><img src="bilder/tolkien.jpg" alt=""></div>
+                            <div class="book-title">
+                                <h3>Title</h3>
+                                <p>Author</p>
+                            </div>
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="book-card-holder">
+                        <div class="book-card">
+                            <div><img src="bilder/tolkien.jpg" alt=""></div>
+                            <div class="book-title">
+                                <h3>Title</h3>
+                                <p>Author</p>
+                            </div>
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="book-card-holder">
+                        <div class="book-card">
+                            <div><img src="bilder/tolkien.jpg" alt=""></div>
+                            <div class="book-title">
+                                <h3>Title</h3>
+                                <p>Author</p>
+                            </div>
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="book-card-holder">
+                        <div class="book-card">
+                            <div><img src="bilder/tolkien.jpg" alt=""></div>
+                            <div class="book-title">
+                                <h3>Title</h3>
+                                <p>Author</p>
+                            </div>
+                            <button></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="request-book">
+                <div class="title">
+                    <h2>Request book</h2>
+                </div>
+                <div class="request-wrapper">
+                    <button class="genre">Thriller</button>
+                    <button class="genre">Horror</button>
+                    <button class="genre">Romance</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+</body>
+</html>
