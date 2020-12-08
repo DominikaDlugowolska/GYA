@@ -45,9 +45,10 @@ include "./conn.php";
                 <div class="title">
                     <h2>Collection</h2>
                 </div>
-                <div class="book-card-wrapper">
+                
                     <?php
-
+                    echo "<div>";
+                    
                     $sql = "SELECT * FROM collection";
                     $result = $conn->query($sql);
 
@@ -57,6 +58,9 @@ include "./conn.php";
                     } else {
                         echo "<p>Found " . $result->num_rows . " uploaded books.</p>";
                     }
+                    echo "</div>";
+
+                    echo "<div class=\"book-card-wrapper\">";
                     
                     while ($row = $result->fetch_assoc()) {
                         echo "<div class=\"book-card-holder\">";
@@ -70,9 +74,8 @@ include "./conn.php";
                     echo "</div>";
                     echo "</div>";
                     }
+                    echo "</div>";
                     ?>
-                    
-                </div>
             </div>
             <div class="request-book">
                 <div class="title">
