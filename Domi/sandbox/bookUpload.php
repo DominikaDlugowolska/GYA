@@ -33,7 +33,7 @@ include "./conn.php";
             </div>
             <div class="topnav" id="myTopnav">
                 <a href="collection-page.php">Collection</a>
-                <a href="#" class="active">Upload</a>
+                <a href="collection-page.php" class="active">Collection</a>
                 <a href="#">Sing out</a>
                 <a href="#">Homepage</a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
