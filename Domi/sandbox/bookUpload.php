@@ -53,27 +53,27 @@ include "./conn.php";
             </form>
         </div>
         <?php
-        /* // This is the directory where images will be saved
+        // This is the directory where images will be saved
         $target = "./book-images";
-        $target = $target . basename($_FILES['image']); */
+        $target = $target . basename($_FILES['image']);
 
         // Ta emot det som skickas
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
         $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
-        /* $pic = ($_FILES['image']); */
+        $pic = ($_FILES['image']);
 
 
-        // Om data finns...
-        if ($title && $author) {
+        // Om data finns...  //trejde variabel//
+        if ($title && $author){
             // mysql -> insert -> runrik och text -> copy php code
             // Sql satsen
-            $sql = "INSERT INTO collection (title, author) VALUES ('$title', '$author')";
+            $sql = "INSERT INTO collection (title, author, image) VALUES ('$title', '$author', '$pic')";
 
-            /* // Var filen skall hamna
+            // Var filen skall hamna
             $target = "./book-images/$pic";
 
             // Äntligen! Flytta filen in i mappen
-            move_uploaded_file($pic, $target); */
+            move_uploaded_file($pic, $target);
 
 
             // Steg 2: nu kör vi sql-saten
