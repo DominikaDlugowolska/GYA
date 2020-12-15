@@ -26,68 +26,107 @@ include "./conn.php";
 </head>
 
 <body>
-<header>
-            <div>
-                <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg"
-                        alt="nti"></a>
-            </div>
-            <div class="topnav" id="myTopnav">
-                <a href="collection-page.php">Collection</a>
-                <a href="collection-page.php" class="active">Collection</a>
-                <a href="#">Sing out</a>
-                <a href="#">Homepage</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+    <header>
+        <div>
+            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg" alt="nti"></a>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="collection-page.php">Collection</a>
+            <a href="collection-page.php" class="active">Collection</a>
+            <a href="#">Sing out</a>
+            <a href="#">Homepage</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <div class="page-grid">
         <div class="collection">
             <h1>Write new books</h1>
-            <form action="#" method="POST">
+            <form action="#" method="POST" enctype="multipart/form-data">
                 <label>Title <input type="text" name="title"></label>
                 <label>Author <input type="text" name="author"></input></label>
+                <label>Genre <input type="text" name="genre"></input></label>
                 <label for="image">Image</label>
                 <input type="file" name="image">
                 <button>Save</button>
             </form>
         </div>
         <?php
-        /* // This is the directory where images will be saved
-        $target = "./book-images";
-        $target = $target . basename($_FILES['image']); */
+        if (isset($_POST['title'], $_POST['author'], $_POST['genre'])) {
 
-        // Ta emot det som skickas
-        $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
-        $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
-        /* $pic = ($_FILES['image']); */
+            // Ta emot filen
+            $file = $_FILES['image'];
+            var_dump($file);
 
+            $title = $_POST['title'];
+            $author = $_POST['author'];
+            $genre = $_POST['genre'];
 
-        // Om data finns...
-        if ($title && $author) {
-            // mysql -> insert -> runrik och text -> copy php code
-            // Sql satsen
-            $sql = "INSERT INTO collection (title, author) VALUES ('$title', '$author')";
+            //  Filens namn
+            $fileName = $file["name"];
+            $fileSize = $file["size"];
+            $fileType = $file["type"];
+            $fileTempName = $file["tmp_name"];
+            $error = $file["error"];
 
-            /* // Var filen skall hamna
-            $target = "./book-images/$pic";
+            // Tillåtna filtyper
+            $allowed = ["jpeg", "png"];
+            
 
-            // Äntligen! Flytta filen in i mappen
-            move_uploaded_file($pic, $target); */
+            // Bildens filtyp
+            $delar = explode("/", $fileType);
+            $imageType = $delar[1];
+            var_dump($imageType);
 
+            // Är filen tillåten?
+            if (in_array($imageType, $allowed)) {
 
-            // Steg 2: nu kör vi sql-saten
-            $result = $conn->query($sql);
+                // Blev det något felmeddelande?
+                if ($error === 0) {
+                    
+                    // Är filen för stor? eller for liten, whatever
+                    if ($fileSize <= 3000000) {
+                        
+                        // Skapa ett unikt namn
+                        $fileNewName = uniqid("", true). "$imageType";
 
-            // Gick det bra att köra sql-satsen
-            if (!$result) {
-                die("There is something wrong with SQL-set" . $conn->error);
+                        // vart filen skall hamna
+                        $fileDestination = "photo/$fileNewName";
+
+                        // Äntligen! Flytta filen in i mappen
+                        move_uploaded_file($fileTempName, $fileDestination);
+                        echo "<p>Filen är uppladdat </p>";
+                        var_dump($fileDestination);
+                    } 
+                    else {
+                        echo "<p>Filen är fööööööör stor!</p>";
+                    }
+                }else {
+                    echo "<p>Något blev fel</p>";
+                }
+                
             } else {
-                echo "<p>The post has been succesfully registred</p>";
+                echo "<p>Sorry, du får bara ladda upp jpg, png eller gif!.</p>";
             }
+             // Sql satsen
+            var_dump($fileDestination);
+            $sql = "INSERT INTO collection (title, author, genre, image) VALUES ('$title', '$author', '$genre', '$fileTempName')";
 
-            // Steg 3: Stänga ned anslutningen
-            $conn->close();
+             // Steg 2: nu kör vi sql-saten
+             $result = $conn->query($sql);
+
+             // Gick det bra att köra sql-satsen
+             if (!$result) {
+                 die("There is something wrong with SQL-set" . $conn->error);
+             } else {
+                 echo "<p>The post has been succesfully registred</p>";
+             }
+ 
+             // Steg 3: Stänga ned anslutningen
+             $conn->close();
+
+            
         }
         ?>
     </div>

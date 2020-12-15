@@ -35,11 +35,11 @@ include "./conn.php";
                     <h2>Genres</h2>
                 </div>
                 <div class="genres-wrapper">
-                    <button class="genre">Thriller</button>
-                    <button class="genre">Horror</button>
-                    <button class="genre">Romance</button>
-                    <button class="genre">Romance</button>
-                    <button class="genre">Romance</button>
+                    <button class="genre" name="thriller">Thriller</button>
+                    <button class="genre" name="horror">Horror</button>
+                    <button class="genre" name="romance">Romance</button>
+                    <button class="genre" name="drama">Drama</button>
+                    <button class="genre" name="sciFi">Sci-fi</button>
                 </div>
             </div>
             <div class="collection">
@@ -49,6 +49,8 @@ include "./conn.php";
                 
                     <?php
 
+                    
+                    
                     /* $image = fopen('book-images/' . $pic, 'r');
                     $Data = fread($image,filesize('$image'));
                     fclose($image); */
@@ -70,7 +72,8 @@ include "./conn.php";
                     while ($row = $result->fetch_assoc()) {
                         echo "<div class=\"book-card-holder\">";
                     echo "<div class=\"book-card\">";
-                    echo "<div><img src=\"bilder/tolkien.jpg\"></div>";
+                    echo "<div><img src=\"$row[image]\"></div>";
+                    var_dump($row);
                     echo "<div class=\"book-title\">
                             <h3>$row[title]</h3>
                             <p>$row[author]</p>";
