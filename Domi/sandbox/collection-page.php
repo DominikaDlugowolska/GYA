@@ -94,7 +94,7 @@ include "./conn.php";
                 </div>
             </div>
         </div>
-    </main>
+    </main> 
     <script>
         function myFunction() {
           var x = document.getElementById("myTopnav");
@@ -105,5 +105,6 @@ include "./conn.php";
           }
         }
         </script>
+   
 </body>
 </html>

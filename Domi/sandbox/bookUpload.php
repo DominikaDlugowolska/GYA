@@ -53,14 +53,13 @@ include "./conn.php";
             </form>
         </div>
         <?php
-        // This is the directory where images will be saved
-        $target = "./book-images";
-        $target = $target . basename($_FILES['image']);
+      $target = "./book-images";
+      $target = $target . basename($_FILES['image']);
 
-        // Ta emot det som skickas
-        $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
-        $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
-        $pic = ($_FILES['image']);
+      // Ta emot det som skickas
+      $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
+      $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
+      $pic = ($_FILES['image']);
 
 
         // Om data finns...  //trejde variabel//
