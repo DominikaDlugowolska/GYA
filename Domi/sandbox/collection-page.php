@@ -1,5 +1,6 @@
 <?php
 include "./conn.php";
+include "./bookUpload.php";
 /* include "./bookUpload.php"; */
 ?>
 <!DOCTYPE html>
@@ -49,11 +50,6 @@ include "./conn.php";
                 
                     <?php
 
-                    
-                    
-                    /* $image = fopen('book-images/' . $pic, 'r');
-                    $Data = fread($image,filesize('$image'));
-                    fclose($image); */
                     echo "<div>";
                     
                     $sql = "SELECT * FROM collection";
@@ -70,10 +66,10 @@ include "./conn.php";
                     echo "<div class=\"book-card-wrapper\">";
                     
                     while ($row = $result->fetch_assoc()) {
-                        echo "<div class=\"book-card-holder\">";
+                    echo "<div class=\"book-card-holder\">";
                     echo "<div class=\"book-card\">";
                     echo "<div><img src=\"$row[image]\"></div>";
-                    var_dump($row);
+                    
                     echo "<div class=\"book-title\">
                             <h3>$row[title]</h3>
                             <p>$row[author]</p>";
@@ -84,7 +80,7 @@ include "./conn.php";
                     }
                     echo "</div>";
                     ?>
-                    <!-- <img src=\"bilder/tolkien.jpg\"> -->
+            
             </div>
             <div class="request-book">
                 <div class="title">

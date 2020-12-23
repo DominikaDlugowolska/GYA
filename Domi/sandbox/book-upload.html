@@ -1,59 +1,56 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Collection</title>
+    <title>Upload books</title>
     <link rel="stylesheet" href="./style/collection-styles.css">
     <link rel="stylesheet" href="./style/menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css%22%3E">
 </head>
+
 <body>
     <header>
-            <div>
-                <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg"
-                        alt="nti"></a>
-            </div>
-            <div class="topnav" id="myTopnav">
-                <a href="#" class="active">Homepage</a>
-                <a href="#">Homepage</a>
-                <a href="#">Homepage</a>
-                <a href="#">Homepage</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+        <div>
+            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg"
+                    alt="nti"></a>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="collection-page.php">Collection</a>
+            <a href="collection-page.php" class="active">Collection</a>
+            <a href="#">Sing out</a>
+            <a href="#">Homepage</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <main>
         <div class="page-grid">
-            <div class="genres">
-                <div class="title">
-                    <h2>Upload book to the system</h2>
-                </div>
-                <form action="bookUpload.php" method="post" enctype="multipart/form-data">
-                    <label for="title">Title</label>
-                    <input type="text" name="title">
-                    <label for="author">Author</label>
-                    <input type="text" name="author">
-                    <br><br>
+            <div class="collection">
+                <h1>Upload new book</h1>
+                <form action="bookUpload.php" method="POST" enctype="multipart/form-data">
+                    <label>Title <input type="text" name="title"></label>
+                    <label>Author <input type="text" name="author"></input></label>
+                    <label>Genre <input type="text" name="genre"></input></label>
                     <label for="image">Image</label>
                     <input type="file" name="image">
-                    <br> <br>
-                    <button type="submit">Submit</button>
+                    <button>Save</button>
                 </form>
             </div>
-            
         </div>
     </main>
     <script>
         function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
-        </script>
+    </script>
 </body>
 </html>
