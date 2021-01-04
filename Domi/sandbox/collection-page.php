@@ -88,9 +88,15 @@ include "./conn.php";
                     <h2>Request book</h2>
                 </div>
                 <div class="request-wrapper">
-                    <button class="genre">Thriller</button>
-                    <button class="genre">Horror</button>
-                    <button class="genre">Romance</button>
+                <form method="post" name="myemailform" action="book-request.php">
+                <label for="name">Enter books title</label>
+                <input type="text" name="name" > <br>
+
+                <label for="author">Enter books author</label>
+                <input type="text" name="author"> <br>
+
+               <br> <input type="submit" value="Send">
+            </form>
                 </div>
             </div>
         </div>
