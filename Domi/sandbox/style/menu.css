@@ -11,10 +11,10 @@ header {
 }
 
 /* Class for the menu part */
-.top-background {
+/* .top-background {
     width: 100%;
     background-image: linear-gradient(-45deg, #d82ca4 0, rgb(76, 0, 130) 100%);
-}
+} */
 
 /* Koden för 'a' element när de syns på Ipad versionen */
 
@@ -43,7 +43,7 @@ header {
     display: block;
     text-align: center;
 }
-.genre {
+/* .genre {
     margin: 3px;
     border-radius: 6px;
     background-color: white;
@@ -57,7 +57,7 @@ header {
 .genre:hover {
     background-image: linear-gradient(-45deg, #d82ca4 0, rgb(76, 0, 130) 100%);
     color: white;
-}
+} */
 
 @media screen and (min-width: 600px) {
     .topnav a {

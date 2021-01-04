@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;500&display=swap');
+.page-grid {
+    display: grid;
+    gap: 54px;
+    padding: 40px;
+}
+#ntii{
+    width: 30%;
+}
+
+.box{
+    background: #F1E9DB;
+    display: grid;
+    box-shadow: 2px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+.wrapper{
+    padding: 32px;
+}
+
+.input-wrapper input{
+    border: none;
+    background: #F1E9DB;
+}
+.input-wrapper div {
+    border-bottom: black solid 1px;
+}
+.img-div{
+    padding: 16px;
+    text-align: center;
+    height: 70%;
+   /*  background-image: url("../bilder/background-books.jpg");
+    background-size: cover; 
+    background-color: #C26BFF;
+    background-blend-mode: multiply;
+    filter: brightness(70%);
+    transform: translateZ(-1px); */
+}
+.img-div img{
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 500;
+    font-size: 42px;
+}
+
+h3 {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 800px) {
+    .page-grid .box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #ntii{
+        width: 25%;
+    }
+}
