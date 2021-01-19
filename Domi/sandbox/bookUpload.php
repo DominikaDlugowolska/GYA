@@ -26,20 +26,19 @@ include "./conn.php";
 </head>
 
 <body>
-<header>
-            <div>
-                <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg"
-                        alt="nti"></a>
-            </div>
-            <div class="topnav" id="myTopnav">
-                <a href="collection-page.php">Collection</a>
-                <a href="collection-page.php" class="active">Collection</a>
-                <a href="#">Sing out</a>
-                <a href="#">Homepage</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+    <header>
+        <div>
+            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg" alt="nti"></a>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="collection-page.php">Collection</a>
+            <a href="collection-page.php" class="active">Collection</a>
+            <a href="#">Sing out</a>
+            <a href="#">Homepage</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <div class="page-grid">
         <div class="collection">
@@ -53,17 +52,17 @@ include "./conn.php";
             </form>
         </div>
         <?php
-      $target = "./book-images";
-      $target = $target . basename($_FILES['image']);
+        $target = "./book-images";
+        $target = $target . basename($_FILES['image']);
 
-      // Ta emot det som skickas
-      $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
-      $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
-      $pic = ($_FILES['image']);
+        // Ta emot det som skickas
+        $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
+        $author = filter_input(INPUT_POST, 'author', FILTER_SANITIZE_STRING);
+        $pic = ($_FILES['image']);
 
 
         // Om data finns...  //trejde variabel//
-        if ($title && $author){
+        if ($title && $author) {
             // mysql -> insert -> runrik och text -> copy php code
             // Sql satsen
             $sql = "INSERT INTO collection (title, author, image) VALUES ('$title', '$author', '$pic')";

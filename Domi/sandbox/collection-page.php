@@ -4,6 +4,7 @@ include "./conn.php";
 ?>
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,21 +13,21 @@ include "./conn.php";
     <link rel="stylesheet" href="./style/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
-            <div>
-                <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg"
-                        alt="nti"></a>
-            </div>
-            <div class="topnav" id="myTopnav">
-                <a href="#" class="active">Collection</a>
-                <a href="bookUpload.php">Upload</a>
-                <a href="#">Collection</a>
-                <a href="#">Homepage</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+        <div>
+            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg" alt="nti"></a>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Collection</a>
+            <a href="bookUpload.php">Upload</a>
+            <a href="#">Collection</a>
+            <a href="#">Homepage</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <main>
         <div class="page-grid">
@@ -46,29 +47,29 @@ include "./conn.php";
                 <div class="title">
                     <h2>Collection</h2>
                 </div>
-                
-                    <?php
 
-                    /* $image = fopen('book-images/' . $pic, 'r');
+                <?php
+
+                /* $image = fopen('book-images/' . $pic, 'r');
                     $Data = fread($image,filesize('$image'));
                     fclose($image); */
-                    echo "<div>";
-                    
-                    $sql = "SELECT * FROM collection";
-                    $result = $conn->query($sql);
+                echo "<div>";
 
-                    // Check if everything went alright
-                    if (!$result) {
-                        die("Something went wrong with SQL: " . $conn->error);
-                    } else {
-                        echo "<p>Found " . $result->num_rows . " uploaded books.</p>";
-                    }
-                    echo "</div>";
+                $sql = "SELECT * FROM collection";
+                $result = $conn->query($sql);
 
-                    echo "<div class=\"book-card-wrapper\">";
-                    
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<div class=\"book-card-holder\">";
+                // Check if everything went alright
+                if (!$result) {
+                    die("Something went wrong with SQL: " . $conn->error);
+                } else {
+                    echo "<p>Found " . $result->num_rows . " uploaded books.</p>";
+                }
+                echo "</div>";
+
+                echo "<div class=\"book-card-wrapper\">";
+
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class=\"book-card-holder\">";
                     echo "<div class=\"book-card\">";
                     echo "<div><img src=\"bilder/tolkien.jpg\"></div>";
                     echo "<div class=\"book-title\">
@@ -78,39 +79,40 @@ include "./conn.php";
                     echo "<button></button>";
                     echo "</div>";
                     echo "</div>";
-                    }
-                    echo "</div>";
-                    ?>
-                    <!-- <img src=\"bilder/tolkien.jpg\"> -->
+                }
+                echo "</div>";
+                ?>
+                <!-- <img src=\"bilder/tolkien.jpg\"> -->
             </div>
             <div class="request-book">
                 <div class="title">
                     <h2>Request book</h2>
                 </div>
                 <div class="request-wrapper">
-                <form method="post" name="myemailform" action="book-request.php">
-                <label for="name">Enter books title</label>
-                <input type="text" name="name" > <br>
+                    <form method="post" name="myemailform" action="book-request.php">
+                        <label for="name">Enter books title</label>
+                        <input type="text" name="name"> <br>
 
-                <label for="author">Enter books author</label>
-                <input type="text" name="author"> <br>
+                        <label for="author">Enter books author</label>
+                        <input type="text" name="author"> <br>
 
-               <br> <input type="submit" value="Send">
-            </form>
+                        <br> <input type="submit" value="Send">
+                    </form>
                 </div>
             </div>
         </div>
-    </main> 
+    </main>
     <script>
         function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
-        </script>
-   
+    </script>
+
 </body>
+
 </html>
