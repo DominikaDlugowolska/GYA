@@ -1,6 +1,5 @@
 <?php
 include "./conn.php";
-include "./bookUpload.php";
 /* include "./bookUpload.php"; */
 ?>
 <!DOCTYPE html>
