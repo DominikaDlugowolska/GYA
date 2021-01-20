@@ -4,6 +4,7 @@ include "./conn.php";
 ?>
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,21 +13,21 @@ include "./conn.php";
     <link rel="stylesheet" href="./style/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <header>
-            <div>
-                <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg"
-                        alt="nti"></a>
-            </div>
-            <div class="topnav" id="myTopnav">
-                <a href="#" class="active">Collection</a>
-                <a href="bookUpload.php">Upload</a>
-                <a href="#">Collection</a>
-                <a href="#">Homepage</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
+        <div>
+            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg" alt="nti"></a>
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="#" class="active">Collection</a>
+            <a href="bookUpload.php">Upload</a>
+            <a href="#">Collection</a>
+            <a href="#">Homepage</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <main>
         <div class="page-grid">
@@ -60,7 +61,6 @@ include "./conn.php";
                     } else {
                         echo "<p>Found " . $result->num_rows . " uploaded books.</p>";
                     }
-                    echo "</div>";
 
                     echo "<div class=\"book-card-wrapper\">";
                     
@@ -95,13 +95,14 @@ include "./conn.php";
     </main>
     <script>
         function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
         }
         </script>
 </body>
+
 </html>
