@@ -129,6 +129,27 @@ p {
     max-height: 100%;
 }
 
+/* Buttons */
+.genre{
+    background: white;
+    border: 1.5px solid purple;
+    padding: 5px;
+    margin-top: 8px;
+    width: 30%;
+    font-size: 70%;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;  
+    position: static;
+    
+    
+}
+.genre:hover{
+    background-image: linear-gradient(-45deg, #d82ca4 0, rgb(76, 0, 130) 100%);
+   color: white;
+}
+
 
 @media screen and (min-width: 600px) {
     /* Main */

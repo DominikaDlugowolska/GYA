@@ -47,53 +47,28 @@ include "./conn.php";
                 <div class="title">
                     <h2>Collection</h2>
                 </div>
+                
+                    <?php
 
-                <?php
+                    echo "<div>";
+                    
+                    $sql = "SELECT * FROM collection";
+                    $result = $conn->query($sql);
 
-                // Välj katalog
-                $katalog = "./bilder";
-
-                // Skanna av katalog
-                $filer = scandir($katalog);
-
-                /* // Loopa igenom alla funna filer
-                foreach ($filer as $key => $bild) {
-
-                    // Visa inte ”." och ”.."
-                    if ($bild == "." || $bild == "..") {
-                        continue;
+                    // Check if everything went alright
+                    if (!$result) {
+                        die("Something went wrong with SQL: " . $conn->error);
+                    } else {
+                        echo "<p>Found " . $result->num_rows . " uploaded books.</p>";
                     }
 
-                    // Visa bara bilden om filformat ”jpg”
-                    $info = pathinfo($bild);
-                    //var_dump($info["extension"]);
-                    if ($info['extension'] == "jpg" || "jpeg" || "png") {
-
-                                echo "<img class=\"d-block w-100\" src=\"$katalog/$bild\">";
-                        echo "</div>";
-                    }
-                } */
-
-                echo "<div>";
-
-                $sql = "SELECT * FROM books";
-                $result = $conn->query($sql);
-
-                // Check if everything went alright
-                if (!$result) {
-                    die("Something went wrong with SQL: " . $conn->error);
-                } else {
-                    echo "<p>Found " . $result->num_rows . " uploaded books.</p>";
-                }
-                echo "</div>";
-
-                echo "<div class=\"book-card-wrapper\">";
-
-                while ($row = $result->fetch_assoc()) {
+                    echo "<div class=\"book-card-wrapper\">";
+                    
+                    while ($row = $result->fetch_assoc()) {
                     echo "<div class=\"book-card-holder\">";
                     echo "<div class=\"book-card\">";
-                    echo "<div><img src=\"$row[cover]\"></div>";
-
+                    echo "<div><img src=\"$row[image]\"></div>";
+                    
                     echo "<div class=\"book-title\">
                             <h3>$row[title]</h3>
                             <p>$row[author]</p>";
@@ -101,10 +76,10 @@ include "./conn.php";
                     echo "<button></button>";
                     echo "</div>";
                     echo "</div>";
-                }
-                echo "</div>";
-                ?>
-
+                    }
+                    echo "</div>";
+                    ?>
+            
             </div>
             <div class="request-book">
                 <div class="title">
@@ -127,7 +102,7 @@ include "./conn.php";
                 x.className = "topnav";
             }
         }
-    </script>
+        </script>
 </body>
 
 </html>
