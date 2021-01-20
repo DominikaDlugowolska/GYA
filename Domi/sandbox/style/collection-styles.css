@@ -4,6 +4,51 @@ body {
     margin: 0;
 }
 
+.page-grid .form-wrapper{
+    padding: 10px;
+}
+.page-grid .form-holder{
+    background: #F1E9DB;
+    padding: 16px;
+    box-shadow: 2px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.page-grid .collection-row .wrapper-horizontal-collection {
+    padding: 10px;
+    background: #F1E9DB;
+    padding: 16px;
+    box-shadow: 2px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection {
+    padding: 10px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection{
+    /* min-width: 100px;
+    max-height: 70px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection img {
+    width: 50px;
+    border-radius: 10px;
+}
+.page-grid .form-wrapper img {
+    width: 50px;
+    border-radius: 10px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection .book-title {
+    max-height: 20px;
+    font-size: 10px;
+}
+
+
 .page-grid .collection .book-card-wrapper .book-card-holder .book-card {
     min-width: 120px;
 }
@@ -113,13 +158,19 @@ p {
     .page-grid .genres {
         grid-row: 1;
     }
+    .page-grid .form-wrapper {
+        max-width: 400px;
+        grid-column: 2;
+    }
 
     .page-grid .collection {
         grid-row: span 3;
     }
+    .page-grid .collection-row {
+        /*  */
+    }
 
     .page-grid .collection .book-card-wrapper {
         grid-template-columns: repeat(4, 1fr);
-
     }
     }
