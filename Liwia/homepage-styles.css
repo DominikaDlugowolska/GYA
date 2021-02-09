@@ -217,9 +217,9 @@ footer {
     max-width: 75%;
     margin-top: 30px;
 }
-.insta {
+/* .insta {
     max-width: 47%;
-}
+} */
 .socialmedia {
     height: 20%;
     width: 90%;
@@ -230,5 +230,30 @@ footer {
     align-items: center;
     padding-left: 30px;
     justify-content: space-between;
+}
+
+@media (min-width: 700px){
+    /* header */
+    .first-quote {
+    font-size: 30px;
+    margin-top: 85%;
+    padding-left: 30px;
+    }
+
+    .button1 {
+        width: 300px;
+    }
+    /* .insta {
+        max-width: 37%;
+    } */
+    .socialmedia {
+    border-top: none;
+    height: 20%;
+    width: 30%;
+    margin-left: 0;
+    }
+    footer{
+        border-top: 2px solid black; 
+    }
 }
 
