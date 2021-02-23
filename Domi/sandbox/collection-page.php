@@ -8,7 +8,7 @@ include "./conn.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Collection</title>
+    <title>Library</title>
     <link rel="stylesheet" href="./style/collection-styles.css">
     <link rel="stylesheet" href="./style/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +21,7 @@ include "./conn.php";
         </div>
         <div class="topnav" id="myTopnav">
             <a href="#" class="active">Collection</a>
-            <a href="bookUpload.php">Upload</a>
+            <a href="bookUpload.php">Admin</a>
             <a href="#">Collection</a>
             <a href="#">Homepage</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -43,6 +43,17 @@ include "./conn.php";
                     <button class="genre" name="sciFi">Sci-fi</button>
                 </div>
             </div>
+            <div class="request-book">
+                <div class="title">
+                    <h2>Request book</h2>
+                </div>
+                <div class="form-holder">
+                    <form action="#">
+                        <input type="text">
+                        <button name="request-btn">Skicka</button>
+                    </form>
+                </div>
+            </div>
             <div class="collection">
                 <div class="title">
                     <h2>Collection</h2>
@@ -52,7 +63,7 @@ include "./conn.php";
 
                     echo "<div>";
                     
-                    $sql = "SELECT * FROM collection";
+                    $sql = "SELECT * FROM books";
                     $result = $conn->query($sql);
 
                     // Check if everything went alright
@@ -67,7 +78,7 @@ include "./conn.php";
                     while ($row = $result->fetch_assoc()) {
                     echo "<div class=\"book-card-holder\">";
                     echo "<div class=\"book-card\">";
-                    echo "<div><img src=\"$row[image]\"></div>";
+                    echo "<div><img src=\"$row[cover]\"></div>";
                     
                     echo "<div class=\"book-title\">
                             <h3>$row[title]</h3>
@@ -81,16 +92,7 @@ include "./conn.php";
                     ?>
             
             </div>
-            <div class="request-book">
-                <div class="title">
-                    <h2>Request book</h2>
-                </div>
-                <div class="request-wrapper">
-                    <button class="genre">Thriller</button>
-                    <button class="genre">Horror</button>
-                    <button class="genre">Romance</button>
-                </div>
-            </div>
+            
         </div>
     </main>
     <script>

@@ -29,10 +29,9 @@ include "./conn.php";
 </head>
 
 <body>
-    <header>
+<header>
         <div>
-            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg"
-                    alt="nti"></a>
+            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg" alt="nti"></a>
         </div>
         <div class="topnav" id="myTopnav">
             <a href="collection-page.php">Collection</a>
@@ -45,10 +44,81 @@ include "./conn.php";
         </div>
     </header>
     <main>
+    <div class="page-grid">
+        <div class="collection-row">
+            <div class="title">
+                <h2>Collection</h2>
+            </div>
+            <div class="wrapper-horizontal-collection">
+                <form action="#" method="post">
+                    <?php
+                    $sql = "SELECT * FROM books ORDER BY title";
+                    //$conn->query($sql) kör koden
+                    $result = $conn->query($sql);
+
+
+                    echo "<div class=\"horizontal-collection\">";
+
+
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<div class=\"row-collection\">";
+
+                        echo "<div><img src=\"$row[cover]\"></div>";
+
+                        echo "<div class=\"book-title\">
+                                <h3>$row[title]</h3>
+                                <p>$row[author]</p>";
+
+                        echo "</div>";
+                        //echo "<button><a href=\"delete-action.php?rn=$row[bookID]\">Delete</p>";
+                        echo "<input type=\"checkbox\" name=\"checkedId[]\" value=\"$row[id]\">";
+                        echo "</div>";
+                    }
+
+
+                    ?>
+                    <button type="submit" name="deleteBtn">DELETE</button>
+                    <!-- <input style="display: none;" name="deleteBtn" value="DELETE"> -->
+                </form>
+            </div>
+
+        <?php
+        if (isset($_POST['deleteBtn'])) {
+
+            $book_id = $_POST['checkedId'];
+
+
+            //if id array is NOT empty
+            if (!empty($_POST['checkedId'])) {
+                
+                        //convert selected ids into string
+                        $idStr = implode(',', $book_id);
+                        // Delete from db
+                        $delete = "DELETE FROM books WHERE id = '$idStr' ";
+                        // Kör koden för att det ska fungera
+                        $dResult = $conn->query($delete);
+
+                        
+                
+                        //if delete is successful
+                        if ($dResult) {
+                            echo "<p>Selected books have been deleted</p>";
+                        } else {
+                            echo "<p>'Something went wrong, please try again'</p>";
+                        }
+            }else {
+                echo "<p>'Select at least one book to remove from collection'</p>";
+            } 
+                // Stäng ner anslutningen
+                $conn->close();
+            }
+        ?>
+        </div>
+    
         <div class="page-grid">
             <div class="collection">
                 <h1>Upload new book</h1>
-                <form action="bookUpload.php" method="POST" enctype="multipart/form-data">
+                <form action="#" method="POST" enctype="multipart/form-data">
                     <label>Title <input type="text" name="title"></label>
                     <label>Author <input type="text" name="author"></input></label>
                     <label>Genre <input type="text" name="genre"></input></label>
@@ -75,7 +145,6 @@ if (isset($_POST['submit'])) {
 
     // Ta emot filen
     $file = $_FILES["image"];
-    var_dump($file);
     //  Filens namn
     $fileName = $file["name"];
     $fileSize = $file["size"];
@@ -111,7 +180,7 @@ if (isset($_POST['submit'])) {
                 $path = "photo/";
                 // Äntligen! Flytta filen in i mappen
                 move_uploaded_file($fileTempName, $fileDestination);
-                $sql = "INSERT INTO collection (title, author, image) VALUES ('$title', '$author', '$fileDestination')";
+                $sql = "INSERT INTO books (title, author, cover) VALUES ('$title', '$author', '$fileDestination')";
                 $conn->query($sql);
 
                 echo "<p>Filen är uppladdat </p>";
