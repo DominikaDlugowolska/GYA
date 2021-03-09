@@ -1,0 +1,66 @@
+/* inloggning */
+.inloggningsBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: #F1E9DB;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(78, 76, 76, 0.5);
+    border-radius: 10px;
+}
+.inloggningsBox h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: purple;
+    text-align: center;
+}
+.inloggningsBox .inputBox {
+    position: relative;
+}
+.inloggningsBox .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 1px ;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    background: transparent;
+}
+.inloggningsBox .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+}
+.inloggningsBox .inputBox input:focus ~ label, .inloggningsBox .inputBox input:valid ~ label {
+    top: -18px;
+    left: 0;
+    color: purple;
+    font-size: 12px;
+}
+.inloggningsBox input[type="submit"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: purple;
+    background: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid purple;
+}
+
+.inloggningsBox input[type="submit"]:hover {
+    background-color: purple;
+    color: white;
+}

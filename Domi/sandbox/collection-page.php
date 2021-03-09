@@ -49,10 +49,9 @@ include "./conn.php";
                 </div>
                 
                     <?php
-
                     echo "<div>";
                     
-                    $sql = "SELECT * FROM collection";
+                    $sql = "SELECT * FROM books";
                     $result = $conn->query($sql);
 
                     // Check if everything went alright
@@ -67,7 +66,7 @@ include "./conn.php";
                     while ($row = $result->fetch_assoc()) {
                     echo "<div class=\"book-card-holder\">";
                     echo "<div class=\"book-card\">";
-                    echo "<div><img src=\"$row[image]\"></div>";
+                    echo "<div><img src=\"$row[cover]\"></div>";
                     
                     echo "<div class=\"book-title\">
                             <h3>$row[title]</h3>

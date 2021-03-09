@@ -197,6 +197,7 @@ main .bottom-content .title {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
+    width: 70%;
 
 }
 
@@ -278,5 +279,57 @@ footer {
     align-items: center;
     padding-left: 30px;
     justify-content: space-between;
+}
+
+@media (min-width:1000px) {
+    /* Header */
+    header img {
+        width: 17vw;
+    }
+    /* title */
+    .h1Sec{
+        font-size: 50px;
+    }
+
+    /* main */
+    .box {
+        width: 68vw;
+    }
+    .box h4 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .dag{
+        font-size: 30px;
+    }
+    .tid {
+        font-size: 25px;
+    }
+
+    /* button */
+    .button1 {
+        width: 30vw;
+    }
+
+    /* main title */
+    .first-quote h1 {
+        font-size: 5vw;
+    }
+
+    /* footer */
+    .socialmedia {
+        height: 30%;
+        align-items: left;
+        justify-content: left;
+    }
+    .socialmedia img{
+        height: auto;
+        max-width: 5vw;
+        margin-top: 25px;
+    }
+    .socialmedia div {
+        width: 10%;     
+        height: 100%;   
+    }
 }
 
