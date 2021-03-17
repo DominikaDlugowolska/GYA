@@ -331,5 +331,58 @@ footer {
         width: 10%;     
         height: 100%;   
     }
+
+   
+}
+@media (min-width: 340px) {
+    /* footer */
+    .socialmedia {
+        height: 40%;
+        align-items: left;
+        justify-content: left;
+    }
+    .socialmedia img{
+        height: auto;
+        max-width: 13vw;
+        margin-top: 25px;
+    }
+    .socialmedia div {
+        width: 25%;     
+        height: 100%;   
+    }
+}
+@media (min-width: 500px) {
+    /* footer */
+    .socialmedia {
+        height: 40%;
+        align-items: left;
+        justify-content: left;
+    }
+    .socialmedia img{
+        height: auto;
+        max-width: 10vw;
+        margin-top: 25px;
+    }
+    .socialmedia div {
+        width: 20%;     
+        height: 100%;   
+    }
+}
+@media (min-width: 1010px) {
+    /* footer */
+    .socialmedia {
+        height: 40%;
+        align-items: left;
+        justify-content: left;
+    }
+    .socialmedia img{
+        height: auto;
+        max-width: 7vw;
+        margin-top: 25px;
+    }
+    .socialmedia div {
+        width: 12%;     
+        height: 100%;   
+    }
 }
 
