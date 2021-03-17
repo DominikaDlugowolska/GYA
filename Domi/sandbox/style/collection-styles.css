@@ -82,7 +82,7 @@ p {
 
 .page-grid {
     display: grid;
-    gap: 54px;
+    gap: 48px;
     padding: 10px 10px;
 }
 
@@ -173,7 +173,7 @@ p {
 
 @media (min-width: 1000px) {
     .page-grid {
-        grid-template-columns: auto auto;
+        grid-template-columns: 2fr 1fr;
         padding: 10px 40px 40px 40px;
     }
 
@@ -185,8 +185,8 @@ p {
         grid-column: 2;
     }
 
-    .page-grid .collection {
-        grid-row: span 3;
+    .page-grid .collection-row {
+        
     }
     
 
