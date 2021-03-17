@@ -84,7 +84,6 @@ include "./conn.php";
                             <h3>$row[title]</h3>
                             <p>$row[author]</p>";
                     echo "</div>";
-                    echo "<button></button>";
                     echo "</div>";
                     echo "</div>";
                     }

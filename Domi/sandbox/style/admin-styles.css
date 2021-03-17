@@ -1,0 +1,50 @@
+.page-grid .collection-row .wrapper-horizontal-collection {
+    padding: 10px;
+    background: #F1E9DB;
+    padding: 16px;
+    box-shadow: 2px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection {
+    padding: 10px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection{
+    /* min-width: 100px;
+    max-height: 70px; */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection img {
+    width: 50px;
+    border-radius: 10px;
+}
+.page-grid .form-wrapper img {
+    width: 50px;
+    border-radius: 10px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection .book-title {
+    max-height: 20px;
+    font-size: 10px;
+}
+
+.page-grid {
+    display: grid;
+    gap: 54px;
+    padding: 10px 10px;
+}
+
+.page-grid .genres {
+    background: #F1E9DB;
+    padding: 16px;
+    box-shadow: 2px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.page-grid .genres .genres-wrapper {
+    padding: 14px;
+}

@@ -114,9 +114,7 @@ include "./conn.php";
             }
         ?>
         </div>
-    
-        <div class="page-grid">
-            <div class="collection">
+    <div class="collection">
                 <h1>Upload new book</h1>
                 <form action="#" method="POST" enctype="multipart/form-data">
                     <label>Title <input type="text" name="title"></label>
@@ -127,6 +125,8 @@ include "./conn.php";
                     <button type="submit" name="submit">Save</button>
                 </form>
             </div>
+        
+    
         </div>
     </main>
     <script>
