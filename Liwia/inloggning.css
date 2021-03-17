@@ -64,3 +64,8 @@
     background-color: purple;
     color: white;
 }
+
+/* modal */
+.modal-content.inloggningsBox {
+    background: #F1E9DB;
+}
