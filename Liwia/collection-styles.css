@@ -82,7 +82,7 @@ p {
 
 .page-grid {
     display: grid;
-    gap: 54px;
+    gap: 48px;
     padding: 10px 10px;
 }
 
@@ -110,6 +110,7 @@ p {
 .page-grid .collection .book-card-wrapper {
     display: grid;
     padding: 32px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .page-grid .collection .book-card-wrapper .book-card-holder {
@@ -151,13 +152,13 @@ p {
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
     /* Main */
     .page-grid {
         padding: 10px 20px;
     }
     .page-grid .collection .book-card-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -166,13 +167,13 @@ p {
         padding: 10px 30px;
     }
     .page-grid .collection .book-card-wrapper {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
     .page-grid {
-        grid-template-columns: auto auto;
+        grid-template-columns: 2fr 1fr;
         padding: 10px 40px 40px 40px;
     }
 
@@ -184,14 +185,12 @@ p {
         grid-column: 2;
     }
 
-    .page-grid .collection {
-        grid-row: span 3;
-    }
     .page-grid .collection-row {
-        /*  */
+        
     }
+    
 
     .page-grid .collection .book-card-wrapper {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(7, 1fr);
     }
     }

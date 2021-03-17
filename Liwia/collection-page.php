@@ -8,7 +8,7 @@ include "./conn.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Collection</title>
+    <title>Library</title>
     <link rel="stylesheet" href="./collection-styles.css">
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,9 +21,9 @@ include "./conn.php";
         </div>
         <div class="topnav" id="myTopnav">
             <a href="#" class="active">Collection</a>
-            <a href="bookUpload.php">Upload</a>
+            <a href="bookUpload.php">Admin</a>
             <a href="#">Collection</a>
-            <a href="arrow.html">Homepage</a>
+            <a href="./arrow.html">Homepage</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -41,6 +41,17 @@ include "./conn.php";
                     <button class="genre" name="romance">Romance</button>
                     <button class="genre" name="drama">Drama</button>
                     <button class="genre" name="sciFi">Sci-fi</button>
+                </div>
+            </div>
+            <div class="request-book">
+                <div class="title">
+                    <h2>Request book</h2>
+                </div>
+                <div class="form-holder">
+                    <form action="#">
+                        <input type="text">
+                        <button name="request-btn">Skicka</button>
+                    </form>
                 </div>
             </div>
             <div class="collection">
@@ -72,7 +83,6 @@ include "./conn.php";
                             <h3>$row[title]</h3>
                             <p>$row[author]</p>";
                     echo "</div>";
-                    echo "<button></button>";
                     echo "</div>";
                     echo "</div>";
                     }
@@ -80,16 +90,7 @@ include "./conn.php";
                     ?>
             
             </div>
-            <div class="request-book">
-                <div class="title">
-                    <h2>Request book</h2>
-                </div>
-                <div class="request-wrapper">
-                    <button class="genre">Thriller</button>
-                    <button class="genre">Horror</button>
-                    <button class="genre">Romance</button>
-                </div>
-            </div>
+            
         </div>
     </main>
     <script>
