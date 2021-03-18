@@ -9,21 +9,21 @@ include "./conn.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Library</title>
-    <link rel="stylesheet" href="./style/collection-styles.css">
-    <link rel="stylesheet" href="./style/menu.css">
+    <link rel="stylesheet" href="./collection-styles.css">
+    <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <div>
-            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_logo_svart.svg" alt="nti"></a>
+            <a href="https://www.ntigymnasiet.se/stockholm/"><img id="nti" src="./bilder/nti_svart.svg" alt="nti"></a>
         </div>
         <div class="topnav" id="myTopnav">
             <a href="#" class="active">Collection</a>
             <a href="bookUpload.php">Admin</a>
             <a href="#">Collection</a>
-            <a href="#">Homepage</a>
+            <a href="./arrow.html">Homepage</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>

@@ -4,92 +4,126 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <link rel="stylesheet" href="inloggning.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="homepage-styles.css">
 </head>
 <body>
-   <section id="sec-1">
+    <section id="sec-1">
         <header>
             <div>
                 <a href="https://www.ntigymnasiet.se/stockholm/">
-                <img src="./bilder/nti_logo.svg"></a>
+                    <img src="./bilder/nti_logo.svg"></a>
             </div>
         </header>
-  
-       <div class="top-content">
-           <div class="first-quote">
-               <h1> NTI - <br>
-                Skolbiblioteket</h1>
-           </div>
-           <div class="second-quote">
-               <h2>Perfekt  <br>
-                plats för dig!</h2>
-           </div> 
-           <a class="scroll-down-holder" href="#sec-2"> 
-           <div class="scroll-down"></div>
-           </a>
-       </div>
-   </section>
-   <section id="sec-2">
+
+        <div class="top-content">
+            <div class="first-quote">
+                <h1> NTI - <br>
+                    Skolbiblioteket</h1>
+            </div>
+            <div class="second-quote">
+                <h2>Perfekt <br>
+                    plats för dig!</h2>
+            </div>
+
+            <div>
+                <a class="scroll-down-holder" href="#sec-2">
+                    <div class="scroll-down"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="sec-2">
         <main>
             <div class="bottom-content">
                 <div class="main-title animate__animated animate__fadeIn">
-                    <h1 class="h1Sec">Välkommen</h1>
+                    <h3 class="h1Sec">Välkommen</h3>
                 </div>
                 <div class="wrapperbtn">
                     <span class="title animate__animated animate__fadeInDown">Vad letar du efter?</span>
-                    <a class="button1" href="min-sida.html">
-                        Min sida
+                    <a class="button1" href="./collection-page.php">
+                        Kollektion
+                    </a>
+                    <a class="button1" href="./elev.html">
+                        Kollektion
                     </a>
 
-                    <a class="button1" href="elev.html">
-                   Elev
-                    </a>
-                    <a class="button1" href="larare.html">
-                        Lärare
-                    </a>
                 </div>
 
-                    <div class="box">
-                        <h4>Öppettider</h4>
-                        <div class="grid">
-                            <div class="holder">
-                                <p class="dag">Mån</p> <br>
-                                <p class="tid">8:00-14:00</p>
-                            </div>
-                            <div class="holder">
-                                <p class="dag">Tis</p> <br>
-                                <p class="tid">8:00-15:00</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="button1" data-bs-toggle="modal" data-bs-target="#geoModal">
+                    Logga in
+                </button>
 
-                            </div>
-                            <div class="holder">
-                                <p class="dag">Ons</p> <br>
-                                <p class="tid">8:00-14:00</p>
-                            </div>
-
-                            <div class="holder">
-                                <p class="dag">Tors</p> <br>
-                                <p class="tid">8:00-14:00</p>
-                            </div>
-                            
-                            <div class="holder">
-                                <p class="dag">Fre</p> <br>
-                                <p class="tid">8:00-14:00</p>
-                            </div>
+                <!-- Modal -->
+                <div class="modal fade" id="geoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content inloggningsBox">
+                            <h2>Inloggning</h2>
+                            <form>
+                                <div class="inputBox">
+                                    <input type="text" name="" required= "">
+                                    <label>E-post</label> 
+                                </div>
+                                <div class="inputBox">
+                                    <input type="password" name="" required= "">
+                                    <label>Lösenord</label> 
+                                </div>
+                                <input type="submit" name="" value="Logga in">
+                            </form>
                         </div>
                     </div>
+                </div>
+
+                <div class="box">
+                    <h4>Öppettider</h4>
+                    <div class="grid">
+                        <div class="holder">
+                            <p class="dag">Mån</p> <br>
+                            <p class="tid">8:00-14:00</p>
+                        </div>
+                        <div class="holder">
+                            <p class="dag">Tis</p> <br>
+                            <p class="tid">8:00-15:00</p>
+
+                        </div>
+                        <div class="holder">
+                            <p class="dag">Ons</p> <br>
+                            <p class="tid">8:00-14:00</p>
+                        </div>
+
+                        <div class="holder">
+                            <p class="dag">Tors</p> <br>
+                            <p class="tid">8:00-14:00</p>
+                        </div>
+
+                        <div class="holder">
+                            <p class="dag">Fre</p> <br>
+                            <p class="tid">8:00-14:00</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer>
             <div class="socialmedia">
                 <div>
-                    <img src="./bilder/instaa.png" alt="insta">
+                    <a href="https://www.instagram.com/ntistockholm/?hl=sv"><img src="./bilder/instaa.png"
+                            alt="insta"></a>
                 </div>
                 <div>
-                    <img src="./bilder/yt2.png" alt="yt">
+                    <a href="https://www.youtube.com/channel/UCf7DmB9NKTJ86MOn4sPON3w"><img src="./bilder/yt2.png"
+                            alt="yt"></a>
                 </div>
             </div>
         </footer>
-       
-   </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="hemsida.js"></script>
 </body>
 </html>
