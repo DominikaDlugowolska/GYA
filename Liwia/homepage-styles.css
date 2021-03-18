@@ -281,10 +281,10 @@ footer {
     justify-content: space-between;
 }
 
-@media (min-width:1000px) {
+@media (min-width:700px) {
     /* Header */
     header img {
-        width: 17vw;
+        width: 18vw;
     }
     /* title */
     .h1Sec{
@@ -333,7 +333,16 @@ footer {
     }
 
    
-}
+}/* NTI logo */
+@media (max-width: 700px) {
+    /* Header */
+    header img {
+      width: 30vw;
+  }  
+  }
+  
+
+/* Social media icons */
 @media (min-width: 340px) {
     /* footer */
     .socialmedia {
