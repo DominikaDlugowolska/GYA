@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;500&display=swap');
+
+.page-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 45px;
+    padding: 10px 40px 40px 40px;
+}
+.page-grid .collection-row .wrapper-horizontal-collection {
+    background: #F1E9DB;
+    padding: 16px;
+    box-shadow: 2px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin-top: 10px;
+} 
+/* .page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection {
+    padding: 10px;
+} */
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.row-collection p {
+    color: red;
+    font-size: 14px;
+    margin: 0;
+    padding-top: 5px;
+}
+.row-collection h3 {
+    font-size: 18px;
+    margin: 0;
+}
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+.form-wrapper {
+    background: #F1E9DB;
+    padding: 16px;
+    box-shadow: 2px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+.form-wrapper form {
+    padding: 10px;
+    font-family: 'IBM Plex Serif', serif;
+}
+.form-wrapper form input {
+    margin: 10px 0;
+    border: 0;
+    padding: 5px;
+}
+.form-wrapper input[type=text]{
+    margin-left: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background: transparent;
+    
+}
+
+.page-grid .collection-row .wrapper-horizontal-collection .horizontal-collection .row-collection .book-title {
+    max-height: 20px;
+    margin-left: 30px;
+}
+button[type=submit] {
+    background: white;
+    border: 1.5px solid purple;
+    padding: 5px;
+    margin-top: 8px;
+    width: 20%;
+    font-size: 80%;
+    font-family: 'IBM Plex Serif', serif;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;  
+    position: static;
+}
+button[type=submit]:hover {
+    box-shadow: 0 0 11px rgba(134, 130, 112, 0.37);
+}
+button[name=submit] {
+    float: right;
+    
+}
+button[name=deleteBtn] {
+    width: 10%;
+}
+input[type=checkbox] {
+    margin: auto 0 auto auto;
+}
+h2 {
+    margin: 0;
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 500;
+    font-size: 42px;
+}
+
+h3 {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 300;
+}

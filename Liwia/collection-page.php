@@ -22,7 +22,6 @@ include "./conn.php";
         <div class="topnav" id="myTopnav">
             <a href="#" class="active">Collection</a>
             <a href="bookUpload.php">Admin</a>
-            <a href="#">Collection</a>
             <a href="./arrow.html">Homepage</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
