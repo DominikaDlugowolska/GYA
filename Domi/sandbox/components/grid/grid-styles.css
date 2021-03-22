@@ -1,0 +1,14 @@
+.page-grid {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.form-holder {
+    background: rgb(230, 227, 196);
+}
+
+.collection {
+    background-color: blue;
+}
